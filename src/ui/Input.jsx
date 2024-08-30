@@ -7,6 +7,8 @@ Input.propTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   classN: PropTypes.string,
+  disabled: PropTypes.bool,
+  defaultValue: PropTypes.string,
 };
 
 function Input({
@@ -16,6 +18,7 @@ function Input({
   onChange,
   placeholder,
   classN = "",
+  disabled = false,
 }) {
   return (
     <input
@@ -25,6 +28,7 @@ function Input({
       placeholder={placeholder}
       onChange={onChange}
       value={value}
+      disabled={disabled}
       required
     />
   );
